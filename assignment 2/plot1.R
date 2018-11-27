@@ -18,6 +18,8 @@ barplot(ann_emissions$total, names.arg = c("1999", "2002", "2005", "2008"),
         ylab = "Emissions PM2.5 (tons)", xlab = "Year", 
         col = "red", main = "Total Emissions (PM 2.5) - All Sources")
 
+# Save plot to png file
+
 png("Plot1.png")
 dev.set(2)
 dev.copy(png, "C:/Users/ldewit/Documents/coursera_local/Exploratory_Data_Analysis/assignment 2/Plot1.png")
