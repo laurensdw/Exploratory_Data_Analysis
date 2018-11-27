@@ -14,7 +14,9 @@ NEI <- readRDS("summarySCC_PM25.rds")
 # Create plot
 
 balt_emiss <- NEI %>% filter(fips == 24510) %>% group_by(year) %>% summarise(total = sum(Emissions))
-barplot(balt_emiss$total, names.arg = c("1999", "2002", "2005", "2008"), xlab = "Year", ylab = "Emissions PM2.5 (tons)", main = "Baltimore Annual Emissions (PM 2.5)", col = "green", ylim = c(0, 3800))
+barplot(balt_emiss$total, names.arg = c("1999", "2002", "2005", "2008"), 
+        xlab = "Year", ylab = "Emissions PM2.5 (tons)", main = "Baltimore Annual Emissions (PM 2.5)", 
+        col = "green", ylim = c(0, 3800))
 
 # Save plot to png file
 
